@@ -1,39 +1,506 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sall Timeless — Salman Fariziy</title>
-  <meta name="description" content="Profil singkat Salman Fariziy — pelajar yang ingin mencapai bintang." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <main class="container">
-    <section class="card" aria-labelledby="judul-profil">
-      <div class="avatar-wrap">
-        <!-- ganti ke path gambarmu (contoh: foto-profil.png) -->
-        <img src="foto-profil.png" alt="Foto Salman Fariziy tampak belakang di pegunungan" class="avatar" loading="lazy" />
+<!doctype html>
+<html lang="id"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260922-05-b4f7588","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YACgEZulLoA,0","Arial Narrow":"YAGyDvJ_4Ts,0","Arial Rounded MT Bold":"YAFcfoaHu-s,0","Arial":"YAGyDvJ_4Ts,0","Avenir Next":"YAFcfmNq6UY,0","Baloo 2":"YADK30bC6HQ,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Broken Glyph":"YADZ-exUkv0,0","Canva Sans":"YAFdJjTk5UU,1","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAFcfvtOAUY,1","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAFdJpU7Kkk,0","Georgia":"YAGzXkO0pEM,0","Ghost Mono":"YAHQutsX00Q,0","Hanken Grotesk":"YAFcfhwp99E,0","Helvetica Neue":"YAFcf6CtJfI,0","Helvetica":"YAFcf6CtJfI,0","IBM Plex Mono":"YAFdJkmvhGI,0","Impact":"YAFcfnjI7Vk,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YADK3zbC6RM,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Lato":"YAFdJuFCnaw,0","Libre Baskerville":"YACgEUFdPdA,0","Lobster":"YAD8SnSjSFI,0","Lora":"YACgEXvxf8Q,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YAFdtQi73Xs,0","Nunito":"YAFdJoNRMmU,1","Oleo Script":"YACgEQQ14jI,0","Oswald":"YACgEQY10lw,0","Pacifico":"YADLjORQ1u4,0","Phantom Sans":"YAFdJvgJ5TU,0","Playfair Display":"YAFdJhem5V8,1","Plus Jakarta Sans":"YAGvf3_u0_Q,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YAFdJpYtCxE,1","Raleway":"YAFdJhmxbVQ,1","Roboto Slab":"YAFdJswIKAg,0","Rockwell":"YAFcfyVZnN0,0","Rye":"YACgEdQP21k,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Source Serif 4":"YACgEfdj394,0","Space Grotesk":"YADZ-dYEmhg,0","Space Mono":"YADW1-vpsoc,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","UV Display":"YAEdVfSSpYo,0","UV Sans":"YAFdJvgJ5TU,0","Ubuntu":"YACgERDU--Q,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YAD1aFjegN8,0","ui-sans-serif":"YACkoD1yZN0,0"}}');</script><script src="/_sdk/83d6dfdadcd4750a.telemetry_sdk.js" integrity="sha512-XS4Dvzp6vbagZS9vFErihvr8aO3S0tH78KWUefn06fmL4WYqryBtZj/IOLITYj7dFA4gPVvPg1W/JB1DK3uLNQ=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snacky Snake Arcade</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #101925;
+      --navy: #14263c;
+      --panel: #193450;
+      --line: #386384;
+      --cream: #fff8dc;
+      --aqua: #55e7dd;
+      --yellow: #ffd34e;
+      --coral: #ff6d63;
+      --pink: #fb8ab8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { background: var(--ink); }
+
+    body {
+      width: 100%;
+      min-height: calc(100 * min(var(--vh, 1vh), 1vh));
+      margin: 0;
+      color: var(--cream);
+      font-family: "DM Sans", sans-serif;
+      background:
+        radial-gradient(circle at 12% 10%, rgba(85,231,221,.20), transparent 24rem),
+        radial-gradient(circle at 88% 82%, rgba(255,109,99,.18), transparent 28rem),
+        #101925;
+    }
+
+    .arcade-shell {
+      width: 100%;
+      min-height: calc(100 * min(var(--vh, 1vh), 1vh));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      overflow: hidden;
+    }
+
+    .game-frame {
+      width: min(100%, 64rem);
+      animation: pop-in .55s cubic-bezier(.2,.85,.28,1) both;
+    }
+
+    .arcade-panel {
+      background: rgba(25, 52, 80, .88);
+      border: 2px solid var(--line);
+      box-shadow: 0 18px 0 rgba(6, 13, 21, .32), 0 28px 45px rgba(0,0,0,.28);
+    }
+
+    .stat-card {
+      border: 1px solid rgba(126, 206, 232, .32);
+      background: rgba(8, 24, 40, .55);
+    }
+
+    .stat-value {
+      font-family: "Space Mono", monospace;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .game-canvas-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      max-width: 33rem;
+      margin-inline: auto;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      background: #091a2b;
+      border: 4px solid #65cfe3;
+      box-shadow: 0 0 0 5px #14263c, 0 18px 30px rgba(0,0,0,.28);
+    }
+
+    #gameCanvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      image-rendering: pixelated;
+    }
+
+    .game-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      background: rgba(6, 18, 31, .48);
+      transition: opacity .2s ease, visibility .2s ease;
+    }
+
+    .game-overlay.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .overlay-card {
+      width: min(100%, 19rem);
+      text-align: center;
+      padding: 1.25rem;
+      border-radius: 1.1rem;
+      border: 2px solid rgba(255,211,78,.72);
+      background: rgba(17, 39, 61, .94);
+      box-shadow: 0 10px 0 rgba(0,0,0,.18);
+    }
+
+    .arcade-button, .dpad-button {
+      border: 2px solid transparent;
+      outline: none;
+      transition: transform .14s ease, filter .14s ease, box-shadow .14s ease;
+    }
+
+    .arcade-button:hover, .dpad-button:hover { filter: brightness(1.08); transform: translateY(-2px); }
+    .arcade-button:active, .dpad-button:active { transform: translateY(1px) scale(.97); }
+    .arcade-button:focus-visible, .dpad-button:focus-visible {
+      outline: 3px solid #fff8dc;
+      outline-offset: 3px;
+    }
+
+    .control-start { background: var(--aqua); color: #07303c; border-color: #b4fff6; }
+    .control-pause { background: var(--yellow); color: #392700; border-color: #fff0a8; }
+    .control-restart { background: var(--coral); color: #fff8dc; border-color: #ffb1a9; }
+
+    .dpad {
+      display: grid;
+      grid-template-columns: repeat(3, 3.65rem);
+      grid-template-rows: repeat(3, 3.35rem);
+      gap: .35rem;
+      justify-content: center;
+    }
+
+    .dpad-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: .85rem;
+      color: #fff8dc;
+      background: #244764;
+      border-color: #4a7898;
+      box-shadow: 0 4px 0 rgba(5, 16, 28, .4);
+      touch-action: manipulation;
+    }
+
+    .dpad-button svg { width: 1.25rem; height: 1.25rem; stroke-width: 3; }
+    .dpad-up { grid-column: 2; grid-row: 1; }
+    .dpad-left { grid-column: 1; grid-row: 2; }
+    .dpad-down { grid-column: 2; grid-row: 2; }
+    .dpad-right { grid-column: 3; grid-row: 2; }
+
+    .status-dot {
+      width: .65rem;
+      height: .65rem;
+      border-radius: 50%;
+      background: var(--aqua);
+      box-shadow: 0 0 13px var(--aqua);
+      flex: 0 0 auto;
+    }
+
+    .status-dot.is-paused { background: var(--yellow); box-shadow: 0 0 13px var(--yellow); }
+    .status-dot.is-over { background: var(--coral); box-shadow: 0 0 13px var(--coral); }
+
+    @keyframes pop-in {
+      from { opacity: 0; transform: translateY(22px) scale(.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @media (max-width: 640px) {
+      .arcade-shell { padding: 1rem .75rem; align-items: flex-start; }
+      .game-frame { padding-bottom: 1rem; }
+      .game-canvas-wrap { max-width: 29rem; }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="/_sdk/8de366929c5f3b48.data_sdk.js" type="text/javascript" integrity="sha512-TyQ8k8cZj66xe/aENmn6RyZpdOFZXbAo5+KBG3PeFM+Q4qMTHU8xAqmq4ADClNfPrstgQYV6OzZHwLTnElzB2g=="></script>
+  <script src="/_sdk/d80647b37084f0c6.editing_sdk.js" type="text/javascript" integrity="sha512-jCz+DtquKRDjnSrSxfhBCzqv2CNRnUAa0936TKD2DSOtf6OZkZ6z2RJ9PZqOhkoYVUsdKS+mJI9DS8ttXywBzw=="></script>
+  <script src="/_sdk/765e1fea0cec97ce.resizing_sdk.js" type="text/javascript" integrity="sha512-IRTJnqww0+HQ5V/LlWEQrlD5SrYHaVvaeVoNe8HYQXoaguzUGheSd9+n9s6WOgaTcEH0g37DuINHZ9aqfzWjlw=="></script>
+ </head>
+ <body data-template-id="__page-root" style="background: rgb(16, 25, 37);">
+  <main class="arcade-shell" aria-labelledby="app-title">
+   <section class="game-frame">
+    <header class="mb-5 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+     <div>
+      <p data-template-id="eyebrow" class="canva-text mb-1 text-xs font-bold uppercase tracking-[0.2em]" style="color: rgb(85, 231, 221); font-weight: 700; font-style: normal; font-size: 12px; letter-spacing: 0.12rem;">Arcade camilan</p>
+      <h1 data-template-id="app-title" class="canva-text text-3xl font-extrabold tracking-tight sm:text-4xl" style="color: rgb(255, 248, 220); font-weight: 800; font-style: normal; font-size: 32px;">Snacky Snake</h1>
+     </div>
+     <p data-template-id="keyboard-hint" class="canva-text max-w-64 text-sm leading-relaxed sm:text-right" style="color: rgb(183, 213, 226); font-weight: 400; font-style: normal; font-size: 14px; line-height: 1.45;">Gunakan tombol panah atau WASD untuk mengarahkan ular.</p>
+    </header>
+    <section data-template-id="game-panel" class="canva-panel arcade-panel rounded-[1.75rem] p-4 sm:p-6" style="background: rgb(25, 52, 80);">
+     <div class="mb-5 grid grid-cols-3 gap-2 sm:gap-3" aria-label="Statistik permainan">
+      <article class="stat-card rounded-xl px-3 py-3 text-center">
+       <p data-template-id="score-label" class="canva-text text-[.65rem] font-bold uppercase tracking-[.16em]" style="color: rgb(183, 213, 226); font-weight: 700; font-style: normal; font-size: 11px; letter-spacing: 0.08rem;">Skor</p>
+       <p id="scoreValue" class="stat-value mt-1 text-xl font-bold text-[#fff8dc]" aria-live="polite">0</p>
+      </article>
+      <article class="stat-card rounded-xl px-3 py-3 text-center">
+       <p data-template-id="high-score-label" class="canva-text text-[.65rem] font-bold uppercase tracking-[.16em]" style="color: rgb(183, 213, 226); font-weight: 700; font-style: normal; font-size: 11px; letter-spacing: 0.08rem;">Tertinggi</p>
+       <p id="highScoreValue" class="stat-value mt-1 text-xl font-bold text-[#ffd34e]" aria-live="polite">0</p>
+      </article>
+      <article class="stat-card rounded-xl px-3 py-3 text-center">
+       <p data-template-id="level-label" class="canva-text text-[.65rem] font-bold uppercase tracking-[.16em]" style="color: rgb(183, 213, 226); font-weight: 700; font-style: normal; font-size: 11px; letter-spacing: 0.08rem;">Level</p>
+       <p id="levelValue" class="stat-value mt-1 text-xl font-bold text-[#55e7dd]" aria-live="polite">1</p>
+      </article>
+     </div>
+     <div class="game-canvas-wrap" aria-label="Area permainan ular">
+      <canvas id="gameCanvas" width="600" height="600" role="img" aria-label="Permainan ular arcade"></canvas>
+      <div id="gameOverlay" class="game-overlay">
+       <div class="overlay-card">
+        <p id="overlayTitle" class="text-xl font-extrabold text-[#fff8dc]">Siap bermain?</p>
+        <p id="overlayText" class="mt-2 text-sm leading-relaxed text-[#b7d5e2]">Tekan Mulai lalu arahkan ular ke camilan.</p>
+       </div>
       </div>
-
-      <h1 id="judul-profil" class="title">Salman Fariziy</h1>
-      <p class="tagline">Hanya seorang pelajar yang ingin mencapai bintang ✨</p>
-
-      <nav class="actions" aria-label="Tautan dan aksi">
-        <a class="btn btn-primary" href="https://www.instagram.com/salman_fariziy/" target="_blank" rel="noopener noreferrer" aria-label="Buka Instagram Salman Fariziy">
-          Follow Instagram
-        </a>
-        <button id="sapaButton" class="btn btn-ghost" type="button">Sapa Saya</button>
+     </div>
+     <div class="mt-5 flex flex-wrap justify-center gap-2.5"><button id="startButton" type="button" data-template-id="start-button" class="canva-button arcade-button control-start rounded-xl px-4 py-3 font-extrabold shadow-lg" style="background: rgb(85, 231, 221); color: rgb(7, 48, 60); font-weight: 800; font-style: normal; font-size: 16px;">Mulai</button> <button id="pauseButton" type="button" data-template-id="pause-button" class="canva-button arcade-button control-pause rounded-xl px-4 py-3 font-extrabold shadow-lg" style="background: rgb(255, 211, 78); color: rgb(57, 39, 0); font-weight: 800; font-style: normal; font-size: 16px;">Jeda</button> <button id="restartButton" type="button" data-template-id="restart-button" class="canva-button arcade-button control-restart rounded-xl px-4 py-3 font-extrabold shadow-lg" style="background: rgb(255, 109, 99); color: rgb(255, 248, 220); font-weight: 800; font-style: normal; font-size: 16px;">Mulai Ulang</button>
+     </div>
+     <div class="mt-5 grid gap-5 border-t border-[#386384] pt-5 md:grid-cols-[1fr_auto_1fr] md:items-center">
+      <div class="flex items-center justify-center gap-2 md:justify-start"><span id="statusDot" class="status-dot"></span>
+       <p id="gameStatus" class="text-sm font-semibold text-[#d4edf5]" aria-live="polite">Menunggu dimulai</p>
+      </div>
+      <nav class="dpad" aria-label="Kontrol arah sentuh"><button type="button" class="dpad-button dpad-up" data-direction="up" aria-label="Atas"><i data-lucide="chevron-up"></i></button> <button type="button" class="dpad-button dpad-left" data-direction="left" aria-label="Kiri"><i data-lucide="chevron-left"></i></button> <button type="button" class="dpad-button dpad-down" data-direction="down" aria-label="Bawah"><i data-lucide="chevron-down"></i></button> <button type="button" class="dpad-button dpad-right" data-direction="right" aria-label="Kanan"><i data-lucide="chevron-right"></i></button>
       </nav>
+      <p data-template-id="control-note" class="canva-text text-center text-xs leading-relaxed md:text-right" style="color: rgb(183, 213, 226); font-weight: 400; font-style: normal; font-size: 12px; line-height: 1.4;">Setiap 50 poin, level dan kecepatan meningkat.</p>
+     </div>
     </section>
-
-    <footer class="footer">
-      <small>© <span id="year"></span> Sall Timeless • Dibuat dengan ♥ dan #FFFFE0</small>
+    <footer class="mt-4 text-center">
+     <p data-template-id="footer-note" class="canva-text text-xs" style="color: rgb(139, 178, 200); font-weight: 400; font-style: normal; font-size: 12px;">Tip: jangan berbalik arah langsung ke tubuh ular sendiri.</p>
     </footer>
+   </section>
   </main>
+  <script>
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+    const scoreValue = document.getElementById("scoreValue");
+    const highScoreValue = document.getElementById("highScoreValue");
+    const levelValue = document.getElementById("levelValue");
+    const statusEl = document.getElementById("gameStatus");
+    const statusDot = document.getElementById("statusDot");
+    const overlay = document.getElementById("gameOverlay");
+    const overlayTitle = document.getElementById("overlayTitle");
+    const overlayText = document.getElementById("overlayText");
+    const startButton = document.getElementById("startButton");
+    const pauseButton = document.getElementById("pauseButton");
+    const restartButton = document.getElementById("restartButton");
 
-  <script src="script.js" defer></script>
-</body>
-</html>
+    const gridSize = 20;
+    const tile = canvas.width / gridSize;
+    let snake;
+    let snack;
+    let direction;
+    let nextDirection;
+    let score;
+    let level;
+    let highScore = Number(sessionStorage.getItem("snacky-snake-high-score") || 0);
+    let gameState = "ready";
+    let lastStep = 0;
+    let animationFrame;
+
+    function resetGame() {
+      snake = [
+        { x: 10, y: 10 },
+        { x: 9, y: 10 },
+        { x: 8, y: 10 }
+      ];
+      direction = { x: 1, y: 0 };
+      nextDirection = { x: 1, y: 0 };
+      score = 0;
+      level = 1;
+      snack = placeSnack();
+      updateHud();
+      drawGame();
+    }
+
+    function placeSnack() {
+      let position;
+      do {
+        position = {
+          x: Math.floor(Math.random() * gridSize),
+          y: Math.floor(Math.random() * gridSize)
+        };
+      } while (snake.some(part => part.x === position.x && part.y === position.y));
+      return position;
+    }
+
+    function updateHud() {
+      scoreValue.textContent = score;
+      highScoreValue.textContent = highScore;
+      levelValue.textContent = level;
+    }
+
+    function setStatus(text, type = "playing") {
+      statusEl.textContent = text;
+      statusDot.classList.toggle("is-paused", type === "paused");
+      statusDot.classList.toggle("is-over", type === "over");
+    }
+
+    function showOverlay(title, message) {
+      overlayTitle.textContent = title;
+      overlayText.textContent = message;
+      overlay.classList.remove("is-hidden");
+    }
+
+    function hideOverlay() {
+      overlay.classList.add("is-hidden");
+    }
+
+    function roundedRect(x, y, width, height, radius, color) {
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.roundRect(x, y, width, height, radius);
+      ctx.fill();
+    }
+
+    function drawGame() {
+      ctx.fillStyle = "#091a2b";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      for (let x = 0; x < gridSize; x++) {
+        for (let y = 0; y < gridSize; y++) {
+          if ((x + y) % 2 === 0) {
+            ctx.fillStyle = "rgba(93, 180, 211, .065)";
+            ctx.fillRect(x * tile, y * tile, tile, tile);
+          }
+        }
+      }
+
+      ctx.strokeStyle = "rgba(126, 206, 232, .13)";
+      ctx.lineWidth = 1;
+      for (let i = 0; i <= gridSize; i++) {
+        ctx.beginPath();
+        ctx.moveTo(i * tile, 0);
+        ctx.lineTo(i * tile, canvas.height);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(0, i * tile);
+        ctx.lineTo(canvas.width, i * tile);
+        ctx.stroke();
+      }
+
+      const sx = snack.x * tile;
+      const sy = snack.y * tile;
+      ctx.fillStyle = "#ff6d63";
+      ctx.beginPath();
+      ctx.arc(sx + tile / 2, sy + tile / 2 + 2, tile * .3, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = "#ffd34e";
+      ctx.fillRect(sx + tile * .31, sy + tile * .18, tile * .38, tile * .16);
+      ctx.fillStyle = "#fff8dc";
+      ctx.fillRect(sx + tile * .38, sy + tile * .2, tile * .06, tile * .1);
+      ctx.fillRect(sx + tile * .56, sy + tile * .2, tile * .06, tile * .1);
+
+      snake.slice().reverse().forEach((part, index) => {
+        const isHead = index === snake.length - 1;
+        const px = part.x * tile + 2;
+        const py = part.y * tile + 2;
+        roundedRect(px, py, tile - 4, tile - 4, tile * .22, isHead ? "#55e7dd" : "#32bdb8");
+
+        if (isHead) {
+          ctx.fillStyle = "#102638";
+          const eyeOffsetX = direction.x === -1 ? 6 : direction.x === 1 ? tile - 10 : 8;
+          const eyeOffsetY = direction.y === -1 ? 6 : direction.y === 1 ? tile - 10 : 8;
+          ctx.fillRect(px + eyeOffsetX, py + eyeOffsetY, 4, 4);
+          if (direction.x !== 0) ctx.fillRect(px + eyeOffsetX, py + tile - 12, 4, 4);
+          if (direction.y !== 0) ctx.fillRect(px + tile - 12, py + eyeOffsetY, 4, 4);
+        }
+      });
+    }
+
+    function stepGame() {
+      direction = nextDirection;
+      const head = snake[0];
+      const newHead = { x: head.x + direction.x, y: head.y + direction.y };
+      const ateSnack = newHead.x === snack.x && newHead.y === snack.y;
+      const bodyToCheck = ateSnack ? snake : snake.slice(0, -1);
+
+      const hitWall = newHead.x < 0 || newHead.y < 0 || newHead.x >= gridSize || newHead.y >= gridSize;
+      const hitBody = bodyToCheck.some(part => part.x === newHead.x && part.y === newHead.y);
+
+      if (hitWall || hitBody) {
+        endGame();
+        return;
+      }
+
+      snake.unshift(newHead);
+
+      if (ateSnack) {
+        score += 10;
+        level = Math.min(10, 1 + Math.floor(score / 50));
+        snack = placeSnack();
+
+        if (score > highScore) {
+          highScore = score;
+          sessionStorage.setItem("snacky-snake-high-score", String(highScore));
+        }
+        updateHud();
+      } else {
+        snake.pop();
+      }
+
+      drawGame();
+    }
+
+    function gameLoop(timestamp) {
+      if (gameState === "playing") {
+        const speed = Math.max(78, 185 - (level - 1) * 12);
+        if (timestamp - lastStep >= speed) {
+          stepGame();
+          lastStep = timestamp;
+        }
+      }
+      animationFrame = requestAnimationFrame(gameLoop);
+    }
+
+    function startGame() {
+      if (gameState === "ready" || gameState === "over") resetGame();
+      gameState = "playing";
+      hideOverlay();
+      setStatus("Makan camilannya!");
+      lastStep = performance.now();
+    }
+
+    function togglePause() {
+      if (gameState === "playing") {
+        gameState = "paused";
+        setStatus("Permainan dijeda", "paused");
+        showOverlay("Jeda", "Tarik napas sebentar. Tekan Jeda lagi untuk lanjut.");
+      } else if (gameState === "paused") {
+        gameState = "playing";
+        hideOverlay();
+        setStatus("Lanjutkan permainan!");
+        lastStep = performance.now();
+      }
+    }
+
+    function endGame() {
+      gameState = "over";
+      setStatus("Game over", "over");
+      showOverlay("Game Over!", "Skormu " + score + ". Tekan Mulai atau Mulai Ulang untuk bermain lagi.");
+    }
+
+    function setDirection(name) {
+      const directions = {
+        up: { x: 0, y: -1 },
+        down: { x: 0, y: 1 },
+        left: { x: -1, y: 0 },
+        right: { x: 1, y: 0 }
+      };
+
+      const proposed = directions[name];
+      if (!proposed) return;
+
+      if (proposed.x === -direction.x && proposed.y === -direction.y) return;
+      nextDirection = proposed;
+
+      if (gameState === "ready" || gameState === "over") startGame();
+    }
+
+    startButton.addEventListener("click", startGame);
+    pauseButton.addEventListener("click", togglePause);
+    restartButton.addEventListener("click", () => {
+      resetGame();
+      startGame();
+    });
+
+    document.querySelectorAll("[data-direction]").forEach(button => {
+      button.addEventListener("click", () => setDirection(button.dataset.direction));
+    });
+
+    document.addEventListener("keydown", event => {
+      const key = event.key.toLowerCase();
+      const keyMap = {
+        arrowup: "up", w: "up",
+        arrowdown: "down", s: "down",
+        arrowleft: "left", a: "left",
+        arrowright: "right", d: "right"
+      };
+
+      if (keyMap[key]) {
+        event.preventDefault();
+        setDirection(keyMap[key]);
+      }
+
+      if (key === " " || key === "p") {
+        event.preventDefault();
+        togglePause();
+      }
+
+      if (key === "enter") {
+        event.preventDefault();
+        startGame();
+      }
+    });
+
+    resetGame();
+    setStatus("Menunggu dimulai");
+    showOverlay("Siap bermain?", "Tekan Mulai lalu arahkan ular ke camilan.");
+    animationFrame = requestAnimationFrame(gameLoop);
+    lucide.createIcons();
+  </script>
+ 
+</body></html>
